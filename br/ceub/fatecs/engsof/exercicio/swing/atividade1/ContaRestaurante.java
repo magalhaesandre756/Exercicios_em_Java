@@ -1,4 +1,4 @@
-package br.ceub.fatecs.engsof.exercicio.swing;
+package br.ceub.fatecs.engsof.exercicio.swing.atividade1;
 
 import javax.swing.*;
 import java.awt.*;
