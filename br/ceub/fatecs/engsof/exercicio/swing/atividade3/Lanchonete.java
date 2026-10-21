@@ -155,6 +155,6 @@ public class Lanchonete extends JFrame {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(Lanchonete::new);
+         SwingUtilities.invokeLater(Lanchonete::new);
     }
 }
