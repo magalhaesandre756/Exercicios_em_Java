@@ -110,10 +110,13 @@ public class Lanchonete extends JFrame {
 
             lblTotal.setText(String.format("Total do Pedido: R$ %.2f", totalPedido));
 
-            txtPedido.append(String.format("%d x %s = R$ %.2f%n", quantidade, produtoSelecionado.getNome(), subTotal));
+            txtPedido.append(String.format("%d x %s = R$ %.2f%n",
+                    quantidade, produtoSelecionado.getNome(), subTotal));
 
         } catch (NumberFormatException erro) {
-            JOptionPane.showMessageDialog(this, "Digite valores numéricos válidos para quantidade.", "Erro", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this,
+                    "Digite valores numéricos válidos para quantidade.",
+                    "Erro", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -121,7 +124,8 @@ public class Lanchonete extends JFrame {
         String cliente = txtCliente.getText().trim();
 
         if (cliente.isEmpty() || quantidadeItem == 0) {
-            JOptionPane.showMessageDialog(this, "Informe o cliente e adicione pelo menos um item.");
+            JOptionPane.showMessageDialog(this,
+                    "Informe o cliente e adicione pelo menos um item.");
             return;
         }
 
@@ -151,7 +155,15 @@ public class Lanchonete extends JFrame {
         double desconto = totalPedido * percentual;
         double totalFinal = totalPedido - desconto;
 
-        JOptionPane.showMessageDialog(this, String.format("Pedido finalizado!%n%n" + "Cliente: %s%n" + "Pagamento: %s%n%n" + "Subtotal: R$ %.2f%n" + "Desconto (%.0f%%): R$ %.2f%n" + "Total final: R$ %.2f", cliente, pagamento, totalPedido, percentual * 100, desconto, totalFinal));
+        JOptionPane.showMessageDialog(this, String.format(
+                "Pedido finalizado!%n%n"
+                + "Cliente: %s%n"
+                + "Pagamento: %s%n%n"
+                + "Subtotal: R$ %.2f%n"
+                + "Desconto (%.0f%%): R$ %.2f%n"
+                + "Total final: R$ %.2f",
+                cliente, pagamento,
+                totalPedido, percentual * 100, desconto, totalFinal));
     }
 
     public static void main(String[] args) {

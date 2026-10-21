@@ -12,9 +12,6 @@ public class ListaDeCompras extends JFrame {
     private JTextArea txtLista;
     private JLabel lblTotal;
     private double totalCompra = 0;
-    private JLabel lblProduto;
-    private JLabel lblQuantidade;
-    private JLabel lblPreco;
 
     public ListaDeCompras() {
         setTitle("Lista de compras");
@@ -37,7 +34,7 @@ public class ListaDeCompras extends JFrame {
         lblTotal = new JLabel("Total da compra: R$ 0,00");
 
         btnAdicionar = new JButton("Adicionar");
-        btnLimpar = new JButton("Limpar");
+        btnLimpar = new JButton("Limpar campos");
 
         txtLista = new JTextArea(10, 30);
         txtLista.setEditable(false);
